@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+
+
+<div class="container" id="forgotCont">
+   <% if(step === 1){ %>
+    <form action="/forgotPass" method="post">
+        <h1>Forgot your password?</h1>
+        <h6 id="just_text"><%= just_text %></h6>
+
+        <input type="email"  placeholder="email" name="email" id="emailForgot"
+        pattern="[^@\s]+@[^@\s]+.{3,}" title="Invalid email address" required >
+        <button type="submit" id="reset_butt">reset password</button>
+        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;">Login</span> page.</h6>
+    </form>
+
+<% }else if(step === 2){ %>
+
+    <form action="/reset-password" method="post">
+        <h1>Enter Verification Code <%= email %></h1>
+        <h6 id="just_text"><%= just_text %></h6>
+
+        <input type="text"  placeholder="Enter the code you received" name="token" 
+        id="emailForgot" required >
+        <button type="submit" id="reset_butt">verify</button>
+        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;">Login</span> page.</h6>
+    </form>
+
+<% }else if (step === 3){ %>
+    <form action="/update-password" method="post">
+        <h1>Reset Password</h1>
+        <h6 id="just_text"><%= just_text %></h6>
+
+        <input type="password" id="psw" placeholder="password" name="password" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        title="Must contain at least one number and one uppercase and lowercase letter and special character, and at least 8 or more characters" required>            <button type="submit">Reset Password</button>
+        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;">Login</span> page.</h6>
+    </form>
+<% } %>
+
+</div>
+
+
+
+<%- include('partials/footer') %> 

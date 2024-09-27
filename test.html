@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Secrets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/css/styles.css">
+
+
+  
+</head>
+
+<body>
+
+
+<div class="container" id="forgotCont">
+    <form action="/forgot-password" method="post">
+        <h1>Forgot your password?</h1>
+        <h6 id="just_text">No worries, we'll send you reset instructions.</h6>
+
+        <input type="email"  placeholder="email" name="email" id="emailForgot"
+        pattern="[^@\s]+@[^@\s]+.{3,}" title="Invalid email address" required >
+        <button type="submit" id="reset_butt">reset password</button>
+        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;">Login</span> page.</h6>
+    </form>
+</div>
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
