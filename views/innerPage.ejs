@@ -2,7 +2,7 @@
 
 
 
-<h1>Welcome to Our Product Page</h1>
+<!-- <h1>Welcome to Our Product Page</h1>
 <form action="/buy" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
@@ -17,6 +17,24 @@
     <input type="number" id="price" name="price" value="20" readonly>
     
     <button type="submit">Buy Now</button>
-</form>
+</form> -->
+
+
+<header>
+    <nav class="mask">
+        <a href="/customer"><%= customer %></a>
+        <a href="/change-password">    Change password</a>
+        <ul class="list">
+          <li><a href="#">Internet Packages</a></li>
+          <li><a href="#">Sectors</a></li>
+          <!-- <li><a href="#">News</a></li> -->
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+        <!-- <button class="search">Search</button> -->
+        <!-- <button class="menu">Menu</button> -->
+      </nav>
+</header>
+
+
 
 <%- include('partials/footer') %>

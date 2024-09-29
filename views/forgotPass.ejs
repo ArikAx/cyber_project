@@ -33,10 +33,43 @@
 
         <input type="password" id="psw" placeholder="password" name="password" 
         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-        title="Must contain at least one number and one uppercase and lowercase letter and special character, and at least 8 or more characters" required>            <button type="submit">Reset Password</button>
-        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;">Login</span> page.</h6>
+        title="Must contain at least one number and one uppercase and lowercase letter and special character, and at least 8 or more characters" required>          
+        <button type="submit">Reset Password</button>
+        <h6 id="login_text">Go back to <span style="color: #A1CAF1; font-size: 1.1rem;" >Login</span> page.</h6>
     </form>
-<% } %>
+
+    <% } else if (step === 4){%>
+        <form action="/" method="get">
+            <h1>Password updated successfully!</h1> <br>
+            <h3>continue to login page.</h3>
+            <button type="submit">lets go!</button>
+        </form>
+
+    <% } else if(step === 5) {%>
+        <% if (error) { %>
+            <div style="color: red;"><%= error %></div>
+        <% } %>
+        <% if (success) { %>
+            <div style="color: green;"><%= success %></div>
+        <% } %>
+        <form action="/change-password" method="post">
+            <label for="currentPassword">Current Password:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required><br><br>
+    
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required><br><br>
+    
+            <label for="confirmPassword">Confirm New Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+    
+            <button type="submit">Change Password</button>
+            <% if(success) {%>
+                <button><a href="/innerPage" style="color: white;">GO Back!</a></button>
+                <% } %>
+        </form>        
+
+
+    <% } %>
 
 </div>
 

@@ -258,7 +258,10 @@ body{
    display: block;
    margin-top:-3vh;
    font-size: 2rem;
-   flex-wrap: wrap;
+   /* flex-wrap: wrap; */
+   position: relative;
+   text-align: center;
+   top:2vh;
   
 }
 
@@ -269,12 +272,15 @@ body{
 }
 
 #forgotCont #just_text{
-    width: 30vh;
+    width: 40vh;
     display: flex;
     text-align: center;
 
 }
 
+#forgotCont input{
+    width: 45vh;
+}
 
 #reset_butt{
     position: relative;
@@ -285,4 +291,73 @@ body{
 #login_text{
     position: relative;
     top: 5vh;
+}
+
+nav {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 50px 10px 50px;
+    display: flex;
+    /* align-items: center; */
+   
+    /* color: white; */
+    font-size: 16px;
+}
+
+nav.mask {
+    /* top: 150px; */
+    background-color:rgba(255,255,255,0.3);
+    backdrop-filter: blur(20px);
+  
+}
+
+
+
+  
+
+  
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0px 1.5vh;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+  
+.list {
+    list-style-type: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.list li {
+    margin-left: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    text-align: center;
 }
