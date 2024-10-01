@@ -17,7 +17,7 @@ const port = 3000;
 app.use(cookieParser());
 const db = new pg.Client({
     user: "postgres",
-    host: "localhost",
+    host: "16.170.245.106",
     database: "comunication_ltd",
     password: process.env.PG_PASS,
     port: 5432,
